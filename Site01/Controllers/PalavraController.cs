@@ -18,7 +18,7 @@ namespace Site01.Controllers
             _db = db;
             
         }
-        //Listar todas as palavras do banco de dados
+        //Listar todas as palavras do banco
         public IActionResult Index()
         {
             var palavras = _db.Palavras.ToList();
