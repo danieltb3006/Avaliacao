@@ -1,0 +1,26 @@
+﻿@model Site01.Models.Palavra
+@{
+    Layout = "_Layout";
+}
+
+
+
+
+        <form method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Digite aqui a palavra">
+                @Html.ValidationMessage("nome")
+            </div>
+            <div class="form-group">
+                <label for="email">Nível</label>
+                <input type="text" name="nivel" value="@Model.Nivel" class="form-control" id="nivel" placeholder="Digite aqui o nível: 1-Fácil 2-Médio 3-Difícil">
+                @Html.ValidationMessage("nivel")
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+
+
+
